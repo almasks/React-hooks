@@ -9,9 +9,9 @@ function Counter(){
     const incrementTwo=()=>{
         setCounterTwo(counterTwo+1)
     }
-    let i=0;
     const isEven=useMemo(()=>{
-        while(i<2000000)
+        let i=0;
+        while(i<200000000)
         i++
 
         return counterOne%2===0

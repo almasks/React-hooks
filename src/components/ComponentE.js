@@ -1,5 +1,4 @@
-import React,{useContext}from "react";
-import { UseContext,ChannelContext } from "../App";
+import React from "react";
 import ComponentF from "./ComponentF";
 
 function ComponentE(){

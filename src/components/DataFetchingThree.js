@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useReducer, useState } from "react";
+import React, { useEffect, useReducer } from "react";
 const initialState={
     loading:true,
     error:'',
@@ -25,7 +25,7 @@ const reducer=(state,action)=>{
 }
 function DataFetchingThree(){
     const[state,dispatch]=useReducer(reducer,initialState)
-    useState(()=>{
+    useEffect(()=>{
         axios.get("https://jsonplaceholder.typicode.com/posts/1")
         .then(res=>{
             dispatch({type:'FETCH_SUCCESS',payload:res.data})
